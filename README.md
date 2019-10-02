@@ -51,9 +51,16 @@ end
 
 Here we've defined two instance methods, the `name=`, or "name equals" method, and the `name` method. The first method takes in an argument of a dog's name and sets that argument equal to a variable, `this_dogs_name`. The second method is responsible for reporting, or reading the name. The methods act as mechanisms to expose data from inside of the object to the outside world.
 
-Our two methods therefore are responsible for "setting" and "getting" an individual dog's name.
+Our two methods therefore are responsible for "setting" and "getting" an individual dog's name. The `name` method is called a "getter". We call it this because it "gets" a property for us. The `name=` method is called a "setter" because it "sets" a property for us. The syntax of setter methods may look odd, but they all are named like this: property=. This is because Ruby provides us with syntactic sugar so that this code:
 
-Here's the functionality we want to achieve:
+```ruby
+lassie = Dog.new
+lassie.name=("Lassie")
+
+lassie.name #=> "Lassie"
+```
+
+can be written like this:
 
 ```ruby
 lassie = Dog.new
@@ -62,9 +69,9 @@ lassie.name = "Lassie"
 lassie.name #=> "Lassie"
 ```
 
-Our new dog instance should be assigned a name and know its name.
+Our new dog instance should now be assigned a name and know its name.
 
-In your `dog.rb` file add the above code. This should create a new dog instance, give it a name (Lassie) and try to access- or read- its name.
+In your `dog.rb` file add the above code. This should create a new dog instance, set its name (Lassie), and try to access- or read- its name.
 
 Run `learn` again. You should see an error message, with the following snippet inside it:
 
