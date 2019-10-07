@@ -51,7 +51,13 @@ end
 
 Here we've defined two instance methods, the `name=`, or "name equals" method, and the `name` method. The first method takes in an argument of a dog's name and sets that argument equal to a variable, `this_dogs_name`. The second method is responsible for reporting, or reading the name. The methods act as mechanisms to expose data from inside of the object to the outside world.
 
-Our two methods therefore are responsible for "setting" and "getting" an individual dog's name. The `name` method is called a "getter". We call it this because it "gets" a property for us. The `name=` method is called a "setter" because it "sets" a property for us. The syntax of setter methods may look odd, but they all are named like this: property=. This is because Ruby provides us with syntactic sugar so that this code:
+Our two methods therefore are responsible for "setting" and "getting" an individual dog's name. The `name` method is aptly called a "getter". This is because it "gets" a property for us. The `name=` method is called a "setter" because it "sets" a property for us. Setter properties are all are written like this: 
+
+```ruby
+property=
+```
+
+Ruby provides us with syntactic sugar so that this code:
 
 ```ruby
 lassie = Dog.new
@@ -60,7 +66,7 @@ lassie.name=("Lassie")
 lassie.name #=> "Lassie"
 ```
 
-can be written like this:
+Can be written like this:
 
 ```ruby
 lassie = Dog.new
